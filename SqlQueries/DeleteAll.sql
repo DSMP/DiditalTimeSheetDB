@@ -1,0 +1,12 @@
+USE DigitalDocs;
+GO
+DROP USER DigitalDocsUser;
+GO
+DROP LOGIN DigitalDocsUser;
+
+GO
+USE master;
+GO
+ALTER DATABASE DigitalDocs SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+GO
+DROP DATABASE DigitalDocs;
